@@ -1,0 +1,125 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "hafiz",
+  "name" : "Muhammad Chaerul Hafiz",
+  "password" : "strongpassword"
+}
+
+### Login
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "hafiz",
+  "password" : "strongpassword"
+}
+
+### Get User
+GET http://localhost:3000/api/users/current
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### Logout User
+DELETE http://localhost:3000/api/users/current
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### Update User
+PATCH http://localhost:3000/api/users/current
+Accept: application/json
+Content-Type: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+{
+  "password" : "strongpassword"
+}
+
+### Create contact
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+{
+  "first_name" : "Muhammad Chaerul",
+  "last_name" : "Hafiz",
+  "email" : "hafiz@example.com",
+  "phone" : "0857123123"
+}
+
+### Update contact
+PUT http://localhost:3000/api/contacts/197
+Content-Type: application/json
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+{
+  "first_name" : "Chaerul",
+  "last_name" : "Fishcake",
+  "email" : "hafiz@example.com",
+  "phone" : "0857123123"
+}
+
+
+### Get contact
+GET http://localhost:3000/api/contacts/197
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### Delete contact
+DELETE http://localhost:3000/api/contacts/197
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### Search contact
+GET http://localhost:3000/api/contacts
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### Create Address
+POST http://localhost:3000/api/contacts/197/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+{
+  "street" : "jalan kita masih panjang",
+  "city" : "kota wakanda",
+  "province" : "provinsi wakanda",
+  "country" : "negara wakanda",
+  "postal_code" : "4123123"
+}
+
+### Get Address
+GET http://localhost:3000/api/contacts/197/addresses/61
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### List Address
+GET http://localhost:3000/api/contacts/197/addresses
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+### Update Address
+PUT http://localhost:3000/api/contacts/197/addresses/61
+Content-Type: application/json
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
+
+{
+  "street" : "jalan kita masih panjang",
+  "city" : "kota wakanda forever",
+  "province" : "provinsi wakanda forever",
+  "country" : "negara wakanda forever",
+  "postal_code" : "12312"
+}
+
+### Remove Address
+DELETE http://localhost:3000/api/contacts/197/addresses/61
+Accept: application/json
+Authorization: eb7ceccc-ff1a-435f-b0d3-14fb805f2193
