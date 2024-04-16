@@ -26,6 +26,14 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## API Specifications
+
+### Documentation
+
+- [Address API Specification](doc/address.md)
+- [Contact API Specification](doc/contact.md)
+- [User API Specification](doc/user.md)
+
 ## Installation
 
 ```bash
